@@ -10,21 +10,32 @@ var ArrowFunc = function(arr) {
 // Merge two sorted arrays into one
 // 8 kyu https://www.codewars.com/kata/merge-two-sorted-arrays-into-one
 
-
+function mergeArrays(arr1, arr2) {
+  let arr = [];
+  if (arr1.length === 0 && arr2.length === 0) {
+    return arr;
+  } else {
+    return [...new Set (arr.concat(arr1, arr2).sort((a, b) => a - b))];
+  }
+}
 // ---------------------------------------------------------------------------
 
 
 // 16+18=214
 // 7 kyu https://www.codewars.com/kata/16-plus-18-equals-214
 
-// let num1 = 26;
-// let num2 = 39;
-// function add(num1, num2) {
-//     num1 = num1.toString().split("");
-//     num2 = num2.toString().split("");
-//     console.log(num2)
-//     // return num1 + num2;
-//   }console.log (num1 + num2);
+function add(num1, num2) {
+  num1 = num1.toString();
+  num2 = num2.toString();
+  let lengthMax = Math.max(num1.length, num2.length);
+  num1 = num1.padStart(lengthMax, 0);
+  num2 = num2.padStart(lengthMax, 0);
+  
+  let result = ''
+  for (let i = 0; i < lengthMax; i++) {
+   result = result + (Number(num1[i]) + Number(num2[i]))
+  } return +result;
+}
 // ---------------------------------------------------------------------------
 
 
@@ -37,16 +48,16 @@ var ArrowFunc = function(arr) {
 // Colour Association
 // 7 kyu https://www.codewars.com/kata/colour-association
 
-let array = [["white", "goodness"], ["blue", "tranquility"]];
-// console.log(array[0][0])
-
-function colourAssociation(array){
-    let arr = [];
-  for (let i = 0; i < array.length; i++) {
-    arr = arr.push(array[i][0] = array[i][1])
-  }
-};
-console.log(colourAssociation(array))
+// let array = [["white", "goodness"], ["blue", "tranquility"]];
+//  console.log(array[0][1])
+//  console.log(Object.fromEntries(array[0]))
+// function colourAssociation(array){
+//     let arr = [];
+//   for (let i = 0; i < array.length; i++) {
+//     //arr = arr.push(array[i][0] = array[i][1])
+//   }
+// };
+// console.log(colourAssociation(array))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
