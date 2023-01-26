@@ -60,10 +60,70 @@ function add(num1, num2) {
 // console.log(colourAssociation(array))
 // ---------------------------------------------------------------------------
 
+
+// Combine objects
+// 7 kyu https://www.codewars.com/kata/combine-objects
+
+// const objA = { a: 10, b: 20, c: 30 };
+// const objB = { a: 3, c: 6, d: 3 };
+
+// function combine(objA, objB) {
+//   let result = {...objA};
+//   //let result = objA;
+//   return result;
+
+// }
+// console.log(combine(objA, objB));
+// //console.log(objA)
+
+// const obj = { a: 10, b: 20, c: 30 };
+// console.log(obj.a)
 // ---------------------------------------------------------------------------
 
+
+// Count the Digit
+// 7 kyu https://www.codewars.com/kata/count-the-digit
+
+function nbDig(n, d) {
+  let count = 0;
+  let str = '';
+  let result;
+
+  for (let k = 0; k <= n; k++) {
+    result = k ** 2;
+    str += result;
+  }
+  
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == d) {
+      count += 1;
+    } 
+  }
+  return count;
+}
+//console.log(nbDig(10, 1));
 // ---------------------------------------------------------------------------
 
+
+// Find the missing element between two arrays
+// 7 kyu https://www.codewars.com/kata/find-the-missing-element-between-two-arrays
+
+function findMissing(arr1, arr2) {
+  arr2.sort((a, b) => a - b);
+  arr1.sort((a, b) => a - b);
+  
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.length === 0) {
+      return arr1[0];
+    }
+    else if (arr1[i] != arr2[i]) {
+      return arr1[i];
+    }
+  }
+}
+// console.log(findMissing([1, 2, 3], [1, 3]));
+// console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
