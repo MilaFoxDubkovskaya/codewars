@@ -126,6 +126,19 @@ function findMissing(arr1, arr2) {
 // console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
 // ---------------------------------------------------------------------------
 
+
+// Get decimal part of the given number
+// 7 kyu https://www.codewars.com/kata/get-decimal-part-of-the-given-number
+
+function getDecimal(n){
+  if (n < 0) {
+    n = -n;
+  }
+
+  return n - Math.floor(n);
+}
+// console.log(getDecimal(-1.2));
+// console.log(getDecimal(34.597))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
