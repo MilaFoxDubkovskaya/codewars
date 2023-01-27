@@ -154,8 +154,31 @@ function maxTriSum(numbers){
 // console.log(maxTriSum([-14,-12,-7,-42,-809,-14,-12]))
 // ---------------------------------------------------------------------------
 
+
+// Whose bicycle?
+// 7 kyu https://www.codewars.com/kata/whose-bicycle
+
+
 // ---------------------------------------------------------------------------
 
+
+// Nickname Generator
+// 7 kyu https://www.codewars.com/kata/nickname-generator
+
+function nicknameGenerator(name){
+  let i = name[2];
+
+  if (name.length < 4) {
+    return 'Error: Name too short';
+  }
+  else if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u') {
+    return name.slice(0, 4);
+  }
+  else return name.slice(0, 3);
+}
+// console.log(nicknameGenerator("Jimmy"));
+// console.log(nicknameGenerator("Sam"));
+// console.log(nicknameGenerator("Gregory"))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
