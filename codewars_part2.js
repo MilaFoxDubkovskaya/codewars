@@ -141,6 +141,17 @@ function getDecimal(n){
 // console.log(getDecimal(34.597))
 // ---------------------------------------------------------------------------
 
+
+// Maximum Triplet Sum (Array Series #7)
+// 7 kyu https://www.codewars.com/kata/maximum-triplet-sum-array-series-number-7
+
+function maxTriSum(numbers){
+  let arr = [... new Set (numbers.sort((a, b) => a - b))];
+  let result = arr.at(-3) + arr.at(-2) + arr.at(-1)
+  return result;
+}
+// console.log(maxTriSum([3,2,6,8,2,3]));
+// console.log(maxTriSum([-14,-12,-7,-42,-809,-14,-12]))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
