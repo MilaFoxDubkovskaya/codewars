@@ -202,6 +202,19 @@ function sortMyString(S) {
 // console.log(sortMyString("YCOLUE'VREER"))
 // ---------------------------------------------------------------------------
 
+
+// Power of two
+// 7 kyu https://www.codewars.com/kata/power-of-two
+
+function isPowerOfTwo(n){
+  let result = 1;
+  for (let i = 1; 2 ** i <= n; i++) {
+    result *= 2;
+  }
+  return result == n ? true : false;
+}
+// console.log(isPowerOfTwo(2));
+// console.log(isPowerOfTwo(5))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
