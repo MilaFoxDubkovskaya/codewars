@@ -181,6 +181,25 @@ function nicknameGenerator(name){
 // console.log(nicknameGenerator("Gregory"))
 // ---------------------------------------------------------------------------
 
+
+// Odd-Even String Sort
+// 7 kyu https://www.codewars.com/kata/odd-even-string-sort
+
+function sortMyString(S) {
+  let str1 = '';
+  let str2 = '';
+
+  for (let i = 0; i < S.length; i++) {
+    if (i % 2 === 0) {
+      str1 = str1 + S[i];
+    } else {
+      str2 = str2 + S[i];
+    }
+  }
+  return `${str1} ${str2}`;
+}
+// console.log(sortMyString("CodeWars"));
+// console.log(sortMyString("YCOLUE'VREER"))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
