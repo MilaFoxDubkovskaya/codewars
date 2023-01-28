@@ -248,8 +248,31 @@ function minSum(arr) {
 // console.log(minSum([12,6,10,26,3,24]))
 // ---------------------------------------------------------------------------
 
+
+// Unpacking Arguments
+// 7 kyu https://www.codewars.com/kata/unpacking-arguments
+
+
 // ---------------------------------------------------------------------------
 
+
+// Vowel one
+// 7 kyu https://www.codewars.com/kata/vowel-one
+
+function vowelOne(s){
+  s = s.toLowerCase();
+  let result = '';
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === 'a' || s[i] === 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
+      result += 1;
+    } else {
+      result += 0;
+    }
+  }
+  return result;
+}
+// console.log(vowelOne('vowelOne'))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
