@@ -217,8 +217,35 @@ function isPowerOfTwo(n){
 // console.log(isPowerOfTwo(5))
 // ---------------------------------------------------------------------------
 
+
+// String Reordering
+// 7 kyu https://www.codewars.com/kata/string-reordering
+
+// function sentence(List) {
+  
+// }
+// let List = [
+//   {'4': 'dog' }, {'2': 'took'}, {'3': 'his'}, 
+//   {'-2': 'Vatsan'}, {'5': 'for'}, {'6': 'a'}, {'12': 'spin'} 
+//  ];
+// console.log(sentence(List));
 // ---------------------------------------------------------------------------
 
+
+// Minimize Sum Of Array (Array Series #1)
+// 7 kyu https://www.codewars.com/kata/minimize-sum-of-array-array-series-number-1
+
+function minSum(arr) {
+  arr.sort((a, b) => a - b);
+  let result = 0;
+
+  while (arr.length > 0) {
+    result += arr.shift() * arr.pop();
+  }
+  return result;
+}
+// console.log(minSum([5,4,2,3]));
+// console.log(minSum([12,6,10,26,3,24]))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
