@@ -48,16 +48,16 @@ function add(num1, num2) {
 // Colour Association
 // 7 kyu https://www.codewars.com/kata/colour-association
 
-// let array = [["white", "goodness"], ["blue", "tranquility"]];
-//  console.log(array[0][1])
-//  console.log(Object.fromEntries(array[0]))
-// function colourAssociation(array){
-//     let arr = [];
-//   for (let i = 0; i < array.length; i++) {
-//     //arr = arr.push(array[i][0] = array[i][1])
-//   }
-// };
-// console.log(colourAssociation(array))
+//let array = [["white", "goodness"], ["blue", "tranquility"]];
+
+function colourAssociation(array){
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    arr[i] = {[array[i][0]]: array[i][1]}
+   }
+   return arr;
+};
+//console.log(colourAssociation(array))
 // ---------------------------------------------------------------------------
 
 
@@ -275,6 +275,14 @@ function vowelOne(s){
 // console.log(vowelOne('vowelOne'))
 // ---------------------------------------------------------------------------
 
+
+//  Who is the killer?
+// 7 kyu https://www.codewars.com/kata/who-is-the-killer-1
+
+function killer(suspectInfo, dead) {
+  
+}
+//console.log(killer({'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']));
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
