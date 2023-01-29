@@ -67,6 +67,9 @@ function colourAssociation(array){
 // const objA = { a: 10, b: 20, c: 30 };
 // const objB = { a: 3, c: 6, d: 3 };
 
+// let res = Object.assign(objA, objB);
+// console.log(res)
+
 // function combine(objA, objB) {
 //   let result = {...objA};
 //   //let result = objA;
@@ -280,7 +283,14 @@ function vowelOne(s){
 // 7 kyu https://www.codewars.com/kata/who-is-the-killer-1
 
 function killer(suspectInfo, dead) {
-  
+  let res1 = Object.values(suspectInfo);
+  let keys = Object.keys(suspectInfo);
+ 
+  for (let i = 0; i < res1.length; i++) {
+    if (res1[i].includes(...dead)) {
+      return keys[i]
+    }
+  }
 }
 //console.log(killer({'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']));
 // ---------------------------------------------------------------------------
