@@ -42,6 +42,9 @@ function add(num1, num2) {
 // Add property to every object in array
 // 7 kyu https://www.codewars.com/kata/add-property-to-every-object-in-array
 
+for (let i = 0; i < questions.length; i++) {
+  questions[i].usersAnswer = null
+}
 // ---------------------------------------------------------------------------
 
 
