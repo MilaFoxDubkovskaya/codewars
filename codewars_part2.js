@@ -255,7 +255,10 @@ function minSum(arr) {
 // Unpacking Arguments
 // 7 kyu https://www.codewars.com/kata/unpacking-arguments
 
-
+function spread(func, args) {
+  return func(...args);
+}
+//console.log(spread(function(x,y){return x+y}, [1,2]))
 // ---------------------------------------------------------------------------
 
 
