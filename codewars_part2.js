@@ -41,7 +41,7 @@ function add(num1, num2) {
 
 // Add property to every object in array
 // 7 kyu https://www.codewars.com/kata/add-property-to-every-object-in-array
-
+let questions = [];
 for (let i = 0; i < questions.length; i++) {
   questions[i].usersAnswer = null
 }
@@ -69,15 +69,22 @@ function colourAssociation(array){
 
 // const objA = { a: 10, b: 20, c: 30 };
 // const objB = { a: 3, c: 6, d: 3 };
+// const objC = { a: 5, d: 11, e: 8 }
+// const objD = { c: 3 }
 
-// let res = Object.assign(objA, objB);
-// console.log(res)
+// let keysA = Object.keys(objA);
+// let keysB = Object.keys(objB);
+// console.log(keysA, keysB)
+// // let res = Object.assign(objA, objB);
+// // console.log(res)
 
 // function combine(objA, objB) {
-//   let result = {...objA};
-//   //let result = objA;
-//   return result;
+//   let lengthMax = Math.max(num1.length, num2.length);
+//   let result = {};
+//   for (let i = 0; i < lengthMax; i++) {
 
+//   }
+//   //return result;
 // }
 // console.log(combine(objA, objB));
 // //console.log(objA)
@@ -164,7 +171,48 @@ function maxTriSum(numbers){
 // Whose bicycle?
 // 7 kyu https://www.codewars.com/kata/whose-bicycle
 
-
+function whoseBicycle(diary1, diary2, diary3) {
+  let values1 = Object.values(diary1)
+  let sumValues1 = values1.reduce((accum, num) => accum + num, 0);
+  let values2 = Object.values(diary2)
+  let sumValues2 = values2.reduce((accum, num) => accum + num, 0);
+  let values3 = Object.values(diary3)
+  let sumValues3 = values3.reduce((accum, num) => accum + num, 0);
+  
+  if (sumValues1 > sumValues2 && sumValues1 > sumValues3) {
+    return 'I need to buy a bicycle for my first son.'
+  }
+  else if ((sumValues2 > sumValues1 && sumValues2 > sumValues3) || (sumValues2 = sumValues1 && sumValues2 > sumValues3)) {
+    return 'I need to buy a bicycle for my second son.'
+  }
+  else if ((sumValues3 > sumValues1 && sumValues3 > sumValues2) || (sumValues3 = sumValues1 && sumValues3 > sumValues2)) { 
+    return 'I need to buy a bicycle for my third son.';
+  }
+}
+// console.log(whoseBicycle(
+//   {
+//     'algebra': 6,
+//     'history': 7,
+//     'physics': 8,
+//     'geography': 9,
+//     'chemistry': 10
+//   },
+//   {
+//     'algebra':6,
+//     'history': 7,
+//     'physics': 8,
+//     'geography': 9,
+//     'chemistry': 10
+//   },
+//   {
+//     'algebra': 6,
+//     'history': 7,
+//     'physics': 8,
+//     'geography': 9,
+//     'chemistry': 10
+//   }
+// )
+// )
 // ---------------------------------------------------------------------------
 
 
