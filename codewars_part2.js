@@ -298,6 +298,25 @@ function killer(suspectInfo, dead) {
 //console.log(killer({'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']));
 // ---------------------------------------------------------------------------
 
+
+// Data Reverse
+// 6 kyu https://www.codewars.com/kata/data-reverse
+
+// const data1 = [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
+// const data2 = [1,0,1,0,1,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1]
+// const data3 = [0,0,1,1,0,1,1,0,0,0,1,0,1,0,0,1]
+// const data4 = [0,0,1,0,1,0,0,1,0,0,1,1,0,1,1,0]
+
+function dataReverse(data) {
+  let res = [];
+ 
+   while (data.length > 0) {
+     res = res.concat(data.slice(-8));
+     data.length = data.length - 8;
+   }
+    return res;
+ }
+//console.log(dataReverse(data4))
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
