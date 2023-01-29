@@ -72,25 +72,22 @@ function colourAssociation(array){
 // const objC = { a: 5, d: 11, e: 8 }
 // const objD = { c: 3 }
 
-// let keysA = Object.keys(objA);
-// let keysB = Object.keys(objB);
-// console.log(keysA, keysB)
-// // let res = Object.assign(objA, objB);
-// // console.log(res)
+function combine() {
+  let result = {};
 
-// function combine(objA, objB) {
-//   let lengthMax = Math.max(num1.length, num2.length);
-//   let result = {};
-//   for (let i = 0; i < lengthMax; i++) {
-
-//   }
-//   //return result;
-// }
+  for (let i = 0; i < arguments.length; i++) {
+    for (let key in arguments[i]) {
+      if (key in result) {
+        result[key] += arguments[i][key]
+      }
+      else {
+        result[key] = arguments[i][key]
+      }
+    }
+  }
+  return result
+}
 // console.log(combine(objA, objB));
-// //console.log(objA)
-
-// const obj = { a: 10, b: 20, c: 30 };
-// console.log(obj.a)
 // ---------------------------------------------------------------------------
 
 
@@ -370,16 +367,3 @@ function dataReverse(data) {
 //console.log(dataReverse(data4))
 // ---------------------------------------------------------------------------
 
-// ---------------------------------------------------------------------------
-
-// ---------------------------------------------------------------------------
-
-// ---------------------------------------------------------------------------
-
-// ---------------------------------------------------------------------------
-
-// ---------------------------------------------------------------------------
-
-// ---------------------------------------------------------------------------
-
-// ---------------------------------------------------------------------------
